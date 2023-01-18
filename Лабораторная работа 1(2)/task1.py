@@ -142,7 +142,7 @@ class Beer:
         """
         Создание объекта "Пиво"
         :param material_: Материал
-        :param percentage_of_alcohol: Содержание алкголя
+        :param percentage_of_alcohol: Содержание алкоголя
         :param capacity_volume: Объем в литрах
         Примеры:
         >>> beer = Beer('Яблоко', 4.5, 0.5)
