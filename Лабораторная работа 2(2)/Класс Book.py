@@ -25,7 +25,7 @@ class Book:
             raise TypeError()
         if id_ < 0:
             raise ValueError()
-        self.id_ = id_
+        self.id = id_
 
         if not isinstance(name, str):
             raise TypeError()
@@ -41,7 +41,7 @@ class Book:
         return f'Книга "{self.name}"'
 
     def __repr__(self) -> str:
-        return f'Book(id_={self.id_!r}, name={self.name!r}, pages={self.pages!r})'
+        return f'Book(id_={self.id!r}, name={self.name!r}, pages={self.pages!r})'
 
 
 if __name__ == '__main__':
