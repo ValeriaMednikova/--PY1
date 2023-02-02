@@ -26,7 +26,7 @@ class Book:
             raise TypeError()
         if id_ < 0:
             raise ValueError()
-        self.id_ = id_
+        self.id = id_
 
         if not isinstance(name, str):
             raise TypeError()
@@ -43,7 +43,7 @@ class Book:
 class Library (BaseModel):
     books: Optional[list]
 
-    def get_next_book_id(self):
+    def get_next_book_id(self) -> int:
         """
         Метод, возвращающий идентификатор для добавления новой книги в библиотеку.
         """
@@ -52,7 +52,7 @@ class Library (BaseModel):
         else:
             return BOOKS_DATABASE[1]["id"]+1
 
-    def get_index_by_book_id(self, id_2: int):
+    def get_index_by_book_id(self, id_2: int) -> int:
         """
         Метод, возвращающий индекс книги в списке, который хранится в атрибуте экземпляра класса.
         """
